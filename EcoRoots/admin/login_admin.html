@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="btn waves-effect waves-light">Volver</a>
+
+    <form action="../php/validar.php" method="post">
+
+        <section class="form-login">
+            <h5>Formulario login</h5>
+            <input type="hidden" name="tipo_login" value="admin">
+            <input class="controls" type="text" name="usuario" value="" placeholder="usuario">
+            <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
+            <input class="buttons" type="submit" value="Ingresar">
+            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        </section>
+
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('error')) {
+                const errorMsg = document.createElement('p');
+                errorMsg.style.color = 'red';
+                errorMsg.textContent = 'Usuario no encontrado';
+                const form = document.querySelector('form');
+                if (form) {
+                    form.prepend(errorMsg);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
