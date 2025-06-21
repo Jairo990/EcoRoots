@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f7f1;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.donar-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap; /* que no se apilen */
+    align-items: flex-start;
+}
+
+.formulario, .donadores {
+    flex: 0 0 400px; /* ancho fijo igual */
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.formulario h1 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.formulario button {
+    margin-top: 25px;
+    background-color: #66bb6a;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #4caf50;
+}
+
+.donadores {
+    background-color: #f1f8e9;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    height: 540px; /* altura fija igual al formulario */
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.donadores h2 {
+    color: #4caf50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.carrusel {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 20s linear infinite;
+}
+
+.donador {
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.donador strong {
+    display: block;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.donador p {
+    margin: 3px 0 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
