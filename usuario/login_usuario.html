@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EcoRoots - Iniciar sesión / Registro</title>
+    <link rel="stylesheet" href="diseño.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+
+    <a href="../index.php" class="btn waves-effect waves-light">Volver</a>
+
+    <div class="container" id="container">
+        <!-- REGISTRO -->
+        <div class="form-container sign-up-container">
+            <form action="../php/registrar.php" method="post">
+                <h1>Crear cuenta</h1>
+                <input type="hidden" name="tipo_login" value="usuario">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <!-- INICIO DE SESIÓN -->
+        <div class="form-container sign-in-container">
+            <form action="../php/validar.php" method="post">
+                <h1>Iniciar sesión</h1>
+                <input type="hidden" name="tipo_login" value="usuario">
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <!-- PANEL DE CAMBIO -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¿Estas registrado?</h1>
+                    <p>¡Inicia sesión con tu correo!</p>
+                    <button class="ghost" id="signIn">Iniciar sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¿No estas registrado?</h1>
+                    <p>¡Unete a nosotros y apoya a la naturaleza!</p>
+                    <button class="ghost" id="signUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/log.js"></script>
+</body>
+</html>
