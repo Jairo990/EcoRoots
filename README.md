@@ -1,4 +1,4 @@
-*Aquí se encontrara la documentacion creada y el codigo del sistema trabajado durante el semestre*
+*Aquí se encontrara el codigo del sistema trabajado durante el semestre*
 
 MATERIA: Analisis y diseño de sistemas
 PROFESOR: Reyna Elia Melara Abarca
